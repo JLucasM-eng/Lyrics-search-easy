@@ -29,7 +29,7 @@ button:focus {
   outline: none;
 }
 
-header {
+main {
   background-image: url('https://images.unsplash.com/photo-1506157786151-b8491531f063?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
   background-repeat: no-repeat;
   background-size: cover;
@@ -43,7 +43,7 @@ header {
   position: relative;
 }
 
-header::after {
+main::after {
   content: '';
   position: absolute;
   top: 0;
@@ -53,11 +53,11 @@ header::after {
   background-color: rgba(0, 0, 0, .4);
 }
 
-header * {
+main * {
   z-index: 1;
 }
 
-header h1 {
+main h1 {
   margin: 0 0 30px;
 }
 
@@ -158,4 +158,59 @@ form button {
 .lyrics {
   margin-top: 20px;
   line-height: 1.5;
+}
+
+.headerContainer{
+  height: 5rem;
+  border-bottom: 1px solid #707376;
+}
+.headerContent {
+  height: 5rem;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.headerContent a{
+  height: 5rem;
+  line-height: 5rem;
+  color:#707376;
+  transition: color 0.2s;
+  position: relative;
+  display: inline-block;
+
+}
+
+
+.headerContent a:hover{
+
+  color: white;
+  font-weight: bold;
+}
+
+.headerContent a + a{
+  margin: 2rem;
+}
+
+a.active::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  background: #9377cc;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  border-radius: 3px 3px 0 0;
+}
+
+a.active::before {
+  content: '';
+  width: 100%;
+  height: 4px;
+  background: #9377cc;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  border-radius: 3px 3px 0 0;
 }
